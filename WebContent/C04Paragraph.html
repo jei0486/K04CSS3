@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04Paragraph.html</title>
+
+
+</head>
+<body>
+    <!-- 
+        수평방향에서의 정렬
+            블럭엘리먼트 : 컨텐츠의 양에 상관없이 하나의 블럭을 차지하게되므로
+                우측에 공간이 충분하여 컨텐츠는 우측정렬된다.
+            인라인 엘리먼트 : 컨텐츠의 크기만큼만 영역을 차지하므로 컨텐츠가 
+                움직일 공간이 없어 정렬되지 않는다.  
+                만약 정렬해야한다면 부모엘리먼트에서 text-align: 을 설정한다.
+
+     -->
+    <h2>문단관련 CSS 속성들</h2>
+
+    <div style="border: 1px blue dotted; width: 400px;"><!-- text-align: right; -->
+        <h2>컨텐츠 수평방향 정렬</h2>
+        <div style="border: 1px solid red; text-align: right;">
+            블럭엘리먼트
+        </div>
+        <span style="border: 1px solid blue; text-align: right;">
+            인라인엘리먼트
+        </span>
+    </div>
+
+    <!-- 
+     line-height: 줄간격. 즉 라인 사이의 간격을 띄우는데
+        블럭과 인라인은 조금 다르게 적용된다.
+        Bloock : 컨텐츠의 영역중 세로영역이 늘어나서 마치 줄간격이 
+            생긴것같은 효과가 나타난다.
+        Inline : 컨텐츠의 영역은 크기의 변화가 없지만, 지정된
+            사이즈만큼 줄간격이 생겨 사이가 벌어진다.
+
+     -->
+    <h3>줄사이의 간격</h3>
+<h4 style="line-height: 5em; border: 1px solid blue;">
+    블럭엘리먼트1에 줄간격 적용
+</h4>
+<h4 style="border: 1px solid black;">블럭 엘리먼트2</h4>
+<h4 style="border: 1px solid black;">블럭 엘리먼트3</h4>
+
+<div class="inline">
+    <span style="line-height: 5em; border: 1px solid black;">
+        인라인엘리먼트1</span>
+        <br>
+    <span style="border: 1px solid black;">인라인엘리먼트2</span>
+    <br>
+    <span style="border: 1px solid black;">인라인엘리먼트3</span>
+</div>
+
+<h3>수직상태에서의 가운데 정렬</h3>
+
+<!-- 
+    div박스의 height와 line-height의 값을 동일하게 지정하면
+    세로상태에서 가운데정렬이 된다.
+ -->
+<h4>블럭엘리먼트 사용시 방법1</h4>
+<div style="border: 1px solid black; height: 200px; width: 200px;
+    line-height: 200px;">
+    나는 텍스트1
+</div>
+
+<!-- 
+    div 박스내부의 padding을 줘서 텍스트를 아래로 밀어준다.
+    이경우 박스의 세로 영역이 늘어나므로 사이즈는 별도로 
+    조절해줘야한다.
+ -->
+<h4>블럭 엘리먼트 사용시 방법2</h4>
+<div style="border: 1px solid red; height: 100px; width: 200px;
+    padding-top: 100px;">
+    나는 텍스트2
+</div>
+
+<!-- 
+    인라인 엘리먼트에서 세로상태의 가운데 정렬을 위해서는
+    vertical-align을 사용한다.
+ -->
+<h4>인라인 엘리먼트 사용시</h4>
+<table border="1" width="300">
+<tr>
+    <td style="height: 100px; vertical-align: top;">인라인엘리먼트
+         세로정렬</td>
+</tr>
+<tr>
+    <td style="height: 100px; vertical-align: middle;">인라인엘리먼트
+         세로정렬</td>
+</tr>
+<tr>
+    <td style="height: 100px; vertical-align: bottom;">인라인엘리먼트
+         세로정렬</td>
+</tr>
+
+</table>
+
+<h2>배분정렬</h2>
+<p style="border:1px solid blue; text-align: justify;">
+    <br><br>
+    화장품 관련 업체 케이에스팩㈜은 직원 34명을 채용하기 위해 이날 오후 2시 경기 안산시청 족구장에 마련된 특별 면접장에서 지원자 60여명을 대상으로 면접을 진행했다.
+    <br><br>
+    면접시험 응시자들의 밀접 접촉으로 인한 코로나19 감염 확산을 차단하기 위해 면접을 야외에서 진행한 것이다.
+    <br><br>
+    이날 특별 면접장은 해당 업체의 긴급한 구인 요청을 받고 안산시가 마련해 준 것이다.
+    <br><br>
+    시는 면접 응시자들의 접촉을 최소화하기 위해 족구장에 2ｍ 간격으로 대기석을 마련한 것은 물론 응시자별 면접 시간도 분리했다.
+    <br><br>
+    또 응시자들이 면접장에 입장하기 전 마스크 착용 및 발열 여부를 체크하고, 손 소독도 하도록 했다.
+    <br><br>
+    안산시는 코로나19가 확산하면서 관내 구인·구직자 만남의 장이 사실상 모두 없어지면서 크게 위축된 취업 시장을 조금이라도 활성화하기 위해 이날 이런 야외 면접을 지원하게 됐다고 설명했다.
+    <br><br>
+</p>
+
+<!-- 
+    text-indent : 문단에서 들여쓰기할때 사용한다.
+        Block : 첫번째줄의 문장이 지정한만큼 들여쓰기 된다.
+        Inline : 컨텐츠의 영역의 잔여공간이 없으므로 들여쓰기
+            되지않는다. 이때 부모 엘리먼트에서 padding을 통해
+            밀어줘야한다.
+ -->
+<h2>들여쓰기</h2>
+<div style="border:1px solid red; text-indent: 1em;">
+    블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+    블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+    블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+</div>
+
+<div style="border:1px solid blue; padding-left: 10px;">
+
+      <span style="text-indent: 1em;">
+        인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+      </span>  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
