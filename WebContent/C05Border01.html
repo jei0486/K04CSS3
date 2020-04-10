@@ -41,14 +41,19 @@
             border-left-width: 25px;
         }
         /* 
+        3가지 속성을 동시에 적용 : 속성값의 순서는 
+        상관없지만 띄워쓰기만 잘하면 적용된다.
+
         실무에서 가장 많이 사용함
-        순서 상관없이 띄어쓰기만 잘해주면 됨
         테두리의 색상&굵기&스타일 동시지정 */
         #border4{
             border: double red 5px;
         }
+        /* 
+        
+        */
         #border5{
-            border:none;
+            border:none;/* 모든 테두리 제거 */
             border-bottom: 2px solid green;
             border-left: 2px  gray solid;
         }

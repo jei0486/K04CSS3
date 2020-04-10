@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12ResponseWeb.html</title>
+    <style type="text/css">
+    /* 전체선택자를 통해 문서의 기본스타일 지정 */
+        *{margin: 0; padding: 0; font-family: Verdana;}
+        /* Block엘리먼트 자체에 대한 가운데 정렬을 위해 margin이 사용된다 */
+        #AllWrap{
+            margin: 0 auto; text-align: center;
+        }
+        #Part-Wrap{
+            width: 100%; text-align: left;
+            border: 1px solid blue;
+        }
+        #header{
+            border: 1px solid blue; text-align: center;
+            height: 100%; line-height: 100px;
+        }
+        /* 
+        <li>태그의 기본 블릿을 제거한다.
+        */
+        #nav ul{
+            list-style: none;
+            overflow: hidden;
+            /* overflow의 속성값 : 레이아웃 잡을때 사용많음
+                        visible: 컨텐츠가 박스를 넘어가도 보임 
+                        auto : 컨텐츠의 상황에 따라 스클롤바 토글됨
+                        scoll : 컨텐츠와 상관없이 무조건 스크롤바 생김
+                        hidden: 박스를 벗어난 부분은 숨겨짐    */
+        }
+        #nav ul li{
+            font-size: 1.5em; font-weight: bold; height: 50px;
+            width: 20%; float: left; border: 1px solid blue;
+            text-align: center; line-height: 50px;
+
+            /* 
+            div를 쓸때 픽셀이 깨지는 경우가 있음 
+            보더박스 지우면 메뉴5가 밑으로 내려옴
+            */
+            /* 전체넓이에 패딩과 보더를 포함하여 지정함*/
+            box-sizing: border-box;
+        }
+        #ContentWrap #content > h2{
+            border-bottom: 1px solid #808080;
+            font-size: 2em;
+        }
+        #content{
+            padding: 20px;
+        }
+        #footer{
+            font-size: 2em; font-weight: bold; height: 100px;
+            line-height: 100px; text-align: center;
+            border: 1px solid blue;
+        }
+        /* 스크린의 크기가 640px이하일때(혹은 디바이스)에서의 보임설정 */
+        @media screen and (max-width: 640px){
+            #AllWrap{width: 100%;}
+            #content p{
+                font-size: 2em; color: black;
+            }
+        }
+        /* 스크린의 크기가 641~999px 사이 */
+        @media screen and (min-width: 641px) and (max-width: 999px){
+            #AllWrap{width: 100%;}
+            #content p{
+                font-size: 1.5em; color: red;
+                background-color: black;
+            }
+        }
+        /* 스크린의 크기가 1000px 이상 */
+         @media screen and (min-width: 1000px){
+             #AllWrap{width: 80%;}
+            #content p{
+                font-size: 1em; color: green;
+             }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="AllWrap">
+        <div id="PartWrap">
+            <div id="header">
+                <h1>HEADER</h1>
+            </div>
+            <div id="nav">
+                <ul>
+                <li>메뉴1입니다</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+                <li>메뉴5</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="ContentWrap">
+        <div id="content">
+            <h2>첫날 사전투표율 오전 9시 현재 1.51%..</h2>
+            <p>
+                이는 사전투표가 적용된 전국단위 선거의 동시간대 투표율 중 최고치다.
+                <br><br>
+                선관위에 따르면 이날 오전 6시부터 시작된 사전투표에서 4천399만4천247명의 선거인 중 66만2천912명이 투표를 마쳤다.
+                <br><br>
+                시도별 사전투표율이 가장 높은 곳은 전남으로 2.47%를 기록했다. 가장 낮은 곳은 대구로 1.13%였다.
+                <br><br>
+                앞서 지난 2018년 지방선거 때는 사전투표 첫날 같은 시간 기준 1.33%의 투표율을 기록했다.
+                <br><br>
+                2017년 대선과 2016년 총선 때는 1.39%, 0.66%를 각각 기록했다.
+                <br><br>
+                사전투표가 적용된 첫 전국 단위 선거였던 2014년 지방선거 때의 투표율은 0.79%였다.
+                <br><br>
+                동시간 사전투표율만 놓고 보면, 이날 최고치를 경신한 것이다.
+                <br><br>
+            </p>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>footer</h1>
+    </div>
+
+
+</body>
+</html>
