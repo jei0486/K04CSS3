@@ -4,96 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration.html</title>
+    <style>
+        div div{
+            display: inline-block;
+        }
+        div{
+           width: 700px;
+        }
+        .select{
+            width: 700px; border:none; background-color: lightgray;
+        }
+
+
+    </style>
 </head>
 <body>
 
-<h1>회원정보(필수)</h1>
+<div class="must">
+    <br>
+<div style="font-size: 2em; font-weight: bold;">회원정보
+    <span style="color: red;">(필수)</span></div>
 
-    아이디
-   <input type="text" size="6">
-   <input type="button">아이디중복확인
-   아이디 형식에 맞춰주세요(영문,슷자 조합 4문자 이상)
-   <br> <br> 
-   비밀번호  
-   <input type="password" size="6">
-   8~20자리의 영문,숫자 조합(영문,숫자,특수 기호 조합을 권장합니다.)
-   <br> <br> 
-   비밀번호 확인  
-   <input type="password" size="6">
-   <br> <br> 
-   이름  
-   <input type="text" size="6">
-   <br> <br>
-    성별  
-    <input type="radio" name="gender" value="M" checked="checked">남자
-    &nbsp;  &nbsp;
-    <input type="radio" name="gender" value="W" checked="checked">여자
-    &nbsp;  &nbsp;
-    <br> <br>
-    생년월일 
-    <select name="birthnumber" >
-        <option value="number"></option>
-        <option value="number"></option>
-        <option value="number"></option>
-    </select>
-    <input type="radio" name="calender" value="sun" checked="checked">양력
-    <input type="radio" name="calender" value="moon" checked="checked">음력
-    <br> <br>
-    이메일
-    <input type="text" name="emil-1st" size="6" >@
-    <input type="text" name="emil-2nd" size="6" >
+
+<div >  <br>
+    <div style="width: 100px; display: inline-block;">아이디 </div>   
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" name="id" value="4자리 이상"></div>   
+
+    <div style="width: 180px; display: inline-block; text-align: right;">
+        <button style="color: white;
+         background-color: green; ">아이디중복확인</button></div>   
+    <span style="font-size: 10px; color: red;">아이디 형식에 맞춰주세요(영문,슷자 조합 4문자 이상)</span>
+</div> 
+
+
+
+<div>
+    <br>
+    <div style="width: 100px; display: inline-block;">비밀번호</div>   
+    <div style="width: 200px; display: inline-block;">
+    <input type="password"  name="pwd" value="fdfdf" ></div>  
+    <span style="font-size: 10px; color: grey; ">
+     8~20자리의 영문,숫자조합(영문,숫자,특수 기호 조합을 권장합니다.)</span>
+</div>
+
+ <div><br>
+    <div style="width: 100px; display: inline-block;">비밀번호 확인 </div>  
+    <div style="width: 100px; display: inline-block;"><input type="password" name="pwdcheck"></div> 
+</div>  
+
+ <div><br>
+    <div style="width: 100px; display: inline-block;">이름 </div>
+    <div style="width: 100px; display: inline-block;"> <input type="text"></div>
+</div> 
+
+<div><br>
+    <div style="width: 100px; display: inline-block;">성별</div>  
+    <div style="width: 100px; display: inline-block;">
+        <input type="radio" name="gender" value="M" checked="checked">남자</div>
+    <div style="width: 100px; display: inline-block;">
+    <input type="radio" name="gender" value="W" checked="checked">여자</div>
+</div>
+
+<div><br>
+    <div style="width: 100px; display: inline-block;">생년월일</div>
+    <div style="width: 150px; display: inline-block;"  >
+    <select name="birth"  >
+        <option value="number" ></option>
+    </select></div>
+    <div style="width: 100px; display: inline-block;">
+    <input type="radio" name="calender" value="sun" checked="checked">양력</div>
+    <div style="width: 100px; display: inline-block;">
+    <input type="radio" name="calender" value="moon" checked="checked">음력</div>
+</div>    
+
+<div><br>
+    <div style="width: 100px; display: inline-block;"> 이메일  </div>
+
+    <div style="width: 80px; display: inline-block;"> 
+    <input type="text" size="7"> </div>
+    
+    <div style="width: 50px; display: inline-block; text-align: center;">@</div>
+
+    <div style="width: 80px; display: inline-block;"> 
+    <input type="text" size="7" > </div>
+
+    <div style="width: 100px; display: inline-block;"> 
     <select name="email" >
         <option value="naver">naver.com</option>
-        <option value="nate">nate.com/option>
+        <option value="nate">nate.com</option>
         <option value="daum">daum.net</option>
         <option value="google">google.com</option>
-    </select>
-    이메일 수신동의 시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다.
+    </select> </div>
+</div>
+
+<div style="font-size: 10px;">
+    이메일 수신동의 시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다. <br>
     수신동의 거부 시에도(주문배송 메일)은 발송됩니다.
     <input type="radio" name="yorno" value="yes"> 예
     <input type="radio" name="yorno" value="no"> 아니오
+</div>
 
-    <br> <br>
-    휴대전화
-    <input type="text" name="phone_1st">-
-    <input type="text" name="phone_2nd">-
-    <input type="text" name="phone_3rd">
-    할인혜택과 이벤트 등의 소식안내를 SMS로 받으실 수 있습니다.
+<div> <br>
+     휴대전화
+     <div style="width: 100px; display: inline-block;">
+        <input type="text" name="phone_1st" size="6"></div>-
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" name="phone_2nd" size="6"></div>-
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" name="phone_3rd" size="6"></div>
+</div>   
+
+<div style="font-size: 10px;">     
+    할인혜택과 이벤트 등의 소식안내를 SMS로 받으실 수 있습니다.<br>
     수신동의 거부 시에도 기본서비스는 발송됩니다. 
     <input type="radio" name="yorno" value="yes"> 예
-    <input type="radio" name="yorno" value="no"> 아니오
+    <input type="radio" name="yorno" value="no"> 아니오  
+    
+</div> 
+<br>
+</div><!-- end of class  -->
 
-<h1>부가정보 (선택)</h1>
+<div class="select">
+    
+<div style="font-size: 2em; font-weight: bold;"> <br>부가정보
+     <span style="color: red;">(선택)</span>
+</div>
 
-일반전화
-<input type="text">-
-<input type="text">-
-<input type="text">
-<br><br>
+<div><br>
+    <div style="width: 100px; display: inline-block;">일반전화</div>
+    <div style="width: 100px; display: inline-block;">
+    <input type="text" size="5"></div>-
+    <div style="width: 100px; display: inline-block;">
+    <input type="text" size="5"></div>-
+    <div style="width: 100px; display: inline-block;">
+    <input type="text" size="5"></div>
 
-주소
-<input type="text">
-<input type="button">우편번호검색
-<input type="text">
-<input type="text">상세주소
+</div>
 
-직업
+<div><br>
+    <div style="width: 100px; display: inline-block;">주소</div>
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" size="10"></div>
+    <div style="width: 100px; display: inline-block;text-align: right;">
+        <button style="color: white; background-color: green; ">  
+            우편번호검색 </button></div>
+</div>
 
-관심 브랜드
+<div><br>
+    <div style="width: 100px; display: inline-block;"></div>
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" size="10"></div>
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" value="상세주소"></div>
+</div>
 
-한빛미디어 한빛아카데미 한빛비즈 한빛라이프 리얼타임 ebook
-MAKE 한빛에듀
+<div><br>
+    <div style="width: 100px; display: inline-block;">직업</div>
+    <div style="width: 100px; display: inline-block;"> 
+        <select name="job" >
+            <option value="선택">::선택::</option>
+            <option value="학생">학생</option>
+            <option value="직장인">직장인</option>
+            <option value="무직">무직</option>
+        </select> </div>
+</div>
 
-관심분야
 
-프로그래밍 언어  웹 모바일/게임
-데이터베이스 네트워크/보안 IT자격증/수험서
-OA/오피스 디자인 사진/예술
-경제/경영 자기계발 인문/사회/과학
-여행/취미 가정/건강/유아 
-기타:
+<div><br>
+    <div style="width: 100px; display: inline-block;"></div>
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">한빛미디어</div>
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">한빛아카데미</div>
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox"> 한빛비즈</div>
 
-회원가입하기
+        <br>
+
+    <div style="width: 100px; display: inline-block;">
+        관심 브랜드 </div>
+    <div style="width: 150px; display: inline-block;"> 
+        <input type="checkbox">한빛라이프</div>
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox"> 리얼타임 ebook</div>
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">MAKE </div>
+
+        <br>
+    <div style="width: 100px; display: inline-block;"></div>    
+    <div style="width: 100px; display: inline-block;">
+        <input type="checkbox">한빛에듀 </div>
+</div>
+
+<div>
+    <br>
+    <div style="width: 100px; display: inline-block;"></div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">프로그래밍 언어</div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox"> 웹</div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox"> 모바일/게임</div> 
+     <br>
+
+    <div style="width: 100px; display: inline-block;"></div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">데이터베이스</div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">네트워크/보안</div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox"> IT자격증/수험서</div>    
+        
+        <br>
+
+    <div style="width: 100px; display: inline-block;"></div>  
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">OA/오피스 </div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">디자인  </div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">사진/예술  </div>    
+
+        <br>
+
+    <div style="width: 100px; display: inline-block;">관심분야</div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">경제/경영</div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox"> 자기계발 </div>    
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">인문/사회/과학 </div>    
+
+        <br>
+
+    <div style="width: 100px; display: inline-block;"></div>  
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">여행/취미 </div>  
+    <div style="width: 150px; display: inline-block;">
+        <input type="checkbox">가정/건강/유아  </div>  
+
+        <br>
+
+    <div style="width: 100px; display: inline-block;"></div>  
+    <div style="width: 70px; display: inline-block;">
+        <input type="checkbox">기타:</div>  
+    
+
+
+    <div style="width: 100px; display: inline-block;">
+        <input type="text" size="15"></div>
+
+
+
+
+
+
+</div>
+<br><br><br>
+
+</div>
+
+
+<button style="color: white; background-color: green; text-align: center;">
+    회원가입하기</button> 
 
 
 
